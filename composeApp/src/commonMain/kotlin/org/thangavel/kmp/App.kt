@@ -11,13 +11,13 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
-fun App() {
+fun App(batteryManager: BatteryManager) {
     MaterialTheme {
         Box(
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-            Text("Hello World!!!")
+            Text("The Battery Percentage is ${batteryManager.getBatteryLevel()}")
         }
     }
 }
